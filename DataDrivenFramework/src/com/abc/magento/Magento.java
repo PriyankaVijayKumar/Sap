@@ -6,7 +6,8 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Magento {
 
@@ -19,7 +20,7 @@ public class Magento {
     String nemail = p.getProperty("email");
     String npass = p.getProperty("pass");
     
-   ChromeDriver driver= new ChromeDriver();
+   WebDriver driver= new FirefoxDriver();
    driver.manage().window().maximize();
    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
    driver.get(nurl);
